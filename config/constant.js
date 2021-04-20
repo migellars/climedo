@@ -28,10 +28,12 @@ const ADMIN_CONSTANTS = {
   BLOCKED_ACCOUNT: "Your account is blocked. Please contact admin.",
 };
 
-const ROLE_CONSTANTS = {
-  SUBMIT_SUCCESS: "Role added successfully",
-  UPDATE_SUCCESS: "Role updated successfully",
-  NOT_FOUND: "Role not found",
+const TAB_CONSTANTS = {
+  SUBMIT_SUCCESS: "Tab added successfully",
+  UPDATE_SUCCESS: "Tab updated successfully",
+  NOT_FOUND: "Tab not found",
+  TAB_ALREADY_EXISTS: "Tab already exists",
+  INVALID_TAB: "Invalid tab"
 };
 
 const USER_CONSTANTS = {
@@ -59,5 +61,4 @@ module.exports.AUTH_CONSTANTS = AUTH_CONSTANTS;
 module.exports.MIDDLEWARE_AUTH_CONSTANTS = MIDDLEWARE_AUTH_CONSTANTS;
 module.exports.ADMIN_CONSTANTS = ADMIN_CONSTANTS;
 module.exports.VERSION_CONSTANT = VERSION_CONSTANT;
-module.exports.ROLE_CONSTANTS = ROLE_CONSTANTS;
-module.exports.USER_CONSTANTS = USER_CONSTANTS;
+module.exports.TAB_CONSTANTS = TAB_CONSTANTS;

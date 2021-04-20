@@ -2,12 +2,23 @@ const { User } = require("../models/user");
 const bcrypt = require("bcryptjs");
 
 module.exports = async () => {
+  const userExists = await User.findOne({
+    email: "godmode@patricia.com",
+    phone: "0123456789",
+    status: "active",
+  });
 
-  const userExists = await User.findOne({ email: "godmode@climedo.com", phone: "0123456789", status: "active" });
-
-  if(!userExists ) {
+  if (!userExists) {
     const password = "12345678";
-    const user = await User.create({ firstName: "Michael", lastName: "Abe", email: "godmode@patricia.com", phone: "0123456789", password, status: "active", isVerified: true });
+    const user = await User.create({
+      firstName: "Michael",
+      lastName: "Abe",
+      email: "godmode@patricia.com",
+      phone: "0123456789",
+      password,
+      status: "active",
+      isVerified: true,
+    });
 
     //create salt for user password hash
     const salt = await bcrypt.genSalt(10);
@@ -17,7 +28,7 @@ module.exports = async () => {
 
     // save user to db
     await user.save();
-    console.log("seed user \"admin\" created...");
+    console.log('seed user "admin" created...');
   }
-
-}
+  console.log(":-)");
+};
