@@ -100,8 +100,6 @@ router.delete("/:id", async (req, res) => {
       message: "Failure",
       data: TAB_CONSTANTS.INVALID_TAB,
     });
-  tab.deleteOne();
-
   return res.send({ statusCode: 200, message: "Success" });
 });
 
